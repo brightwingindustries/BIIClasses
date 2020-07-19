@@ -1,0 +1,72 @@
+/**
+ * NOTES
+ * 
+ * Should return references to things more often, including 'check' and '[]'
+ * 
+ * NEED TO ADD A TON OF OPERATOR OVERLOADS
+ * AND SPECIAL MEMBER FUNCTIONS!!
+ * and make RAII compliant (and use smart/unique pointers etc.)
+ * and an iterator class!
+ * and make it const correct
+ * add the option to initalize with a certain length (i.e. a different constructor)
+ * add + operator
+ * add endl
+ * add clear
+ * add noexcept
+ * add constexpr
+ * 
+ * THINGS TO CONSIDER WHEN PASSING PARAMETERS
+ * Should it be passed by reference?
+ * Should it be passed as const?
+ * 
+ * 
+ * Default constructor should be able to make to an initial size without 
+ * needing a separate function
+ * 
+ * Add vector<T>& return values to appropriate member functions
+ * 
+ * Need to fix innerVec and clear
+ * 
+ * Need to organize this file
+ * 
+ * Add an iterator class, add {} overload –– initializer_list constructor
+ * 
+ * 
+ * SECTIONS HEADER WOULD BE NICE (like addBack stuff is lines x -> y)
+ * 
+ * CONCEPTS
+ * Template Classes
+ * Const Correctness
+ * Operator Overloading
+ * Special Member Functions
+ * Move Semantics
+ * RAII
+ * 
+ * Class inheritance?
+ * Fill constructor?
+ *
+ * Add the ability to give two iterators from an existing
+ * vector and have a vector constructed using that
+ * 
+ * ADD MEMBER INITIALIZATION LIST CONSTRUCTOR AND ASSIGNMENT
+ *
+ */
+
+
+template <typename T> 
+Vector<T>::Vector(const std::initializer_list<T>& given) : 
+    _size(given.size()), 
+    _capacity(given.size()), 
+    _elements(new T[given.size()]) { 
+    copy(given, given._elements + given._size, _elements);
+}
+
+/**
+     * Member Initializer List Constructor
+     * Creates a new vector with the given elements
+     */
+    Vector(const std::initializer_list<T>& given);
+
+maybe add -1 access to last element in the vector
+
+Make it so functions work with iterators or indexes?

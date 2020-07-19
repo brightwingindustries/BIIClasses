@@ -1,0 +1,13 @@
+Things to add:
+
+RAII compliance
+
+Move/Copy constructors
+
+RValue version of push
+
+noexcept and inline for optimization
+
+maybe add const cast trick
+
+add a clear function
