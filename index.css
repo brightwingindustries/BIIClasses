@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: grey;
+    text-align: center;
+    padding: 40px;
+}
+
+#company-name {
+    font-size: 40px;
+}
