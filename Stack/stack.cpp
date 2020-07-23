@@ -97,9 +97,10 @@ T& Stack<T>::pull() {
         throw empty_stack();
     }
     stackNode* temp = _head;
-    
     _head = _head->next;
-    cout << "Getttttin here??? " << endl;
+	
+	// _head -><- node -><- node -><- node -> nullptr
+	// 
     temp->next = nullptr;
     return temp->element;
 }
